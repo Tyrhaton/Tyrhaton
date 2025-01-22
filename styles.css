@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #078479;
+}
+
+.discord-profile {
+  display: flex;
+  flex-direction: column;
+  background-color: #282b30;
+  max-width: 550px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  position: relative;
+  border-radius: 10px;
+}
+
+.discord-profile::before {
+  content: "";
+  position: absolute;
+  height: 16.5%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #db406b;
+  border-radius: 10px 10px 0 0;
+}
+
+.image {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 15px 0;
+}
+
+.image .profile-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+  border: 6px solid #282b30;
+}
+
+#status:hover {
+    cursor: pointer;
+}
+
+#status {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 6px solid #191b1d;
+  bottom: 5px;
+  right: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.online {
+  background-color: #43b581;
+}
+.dnd {
+    background-color: #f04747;
+}
+
+.in-dnd {
+  background-color: #191b1d;
+  width: 14px;
+  height: 6px;
+  border-radius: 24px;
+}
+
+.data {
+  background-color: #191b1d;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.discord-profile .username {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 14px;
+}
+
+.username .name {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.username .small-name {
+  font-size: 12px;
+}
+
+.discord-profile .info {
+  display: flex;
+  flex-direction: column;
+  padding: 9px 0;
+}
+
+.info .text {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.info .date {
+  font-size: 10px;
+  padding-top: 4px;
+  padding-bottom: 2px;
+}
+
+.discord-profile .note {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding-bottom: 8px;
+}
+
+.note #notes {
+  font-size: 10px;
+  font-weight: 600;
+  padding-bottom: 6px;
+}
+
+textarea {
+  resize: none;
+  color: white;
+  background-color: #191b1d;
+  border-color: #191b1d;
+  font-size: 11px;
+}
+
+textarea::placeholder {
+  color: white;
+  opacity: 60%;
+}
+
+hr {
+  height: 0.1px;
+  border: none;
+  background-color: #282b30;
+}
+
+.connection {
+  display: flex;
+  justify-content: space-between;
+}
+
+.connection .item {
+  border: 1px solid #282b30;
+  border-radius: 5px;
+  padding: 10px;
+  max-width: 245px;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.item {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+}
+.item:hover {
+    /* border: 1px solid #282b30; */
+    background-color: #282b30;
+    /* filter: blur(0.1%); */
+  }
+
+.margin-hr {
+  margin-bottom: 18px;
+}
+
+i,
+svg {
+  vertical-align: middle;
+  fill: white;
+}
+
+.link-icon {
+  font-size: 25px;
+}
+
+.bx-check {
+  font-size: 18px;
+}
+
+.right-nav {
+  float: right;
+  color: white;
+}
+
+.arrow-size {
+  transform: scale(0.7);
+  opacity: 80%;
+}
+
+.link-icon {
+  padding-right: 5px;
+}
+
+span {
+  color: white;
+}
+
+#pages {
+  display: flex;
+  justify-content: left;
+  gap: 5%;
+  border-bottom: #282b30 1px solid;
+}
+.page {
+  /* padding: 10px;
+    font-size: 15px;
+    color: white;
+    text-decoration: none; */
+  background-color: #191b1d;
+  color: white;
+  /* border: 1px solid #282b30; */
+  border: none;
+  border-radius: 5px;
+  padding: 1%;
+  max-width: 30%;
+  /* width: 100%; */
+  /* margin-bottom: 5px; */
+}
+.page:hover {
+  /* border: 1px solid #282b30; */
+  background-color: #282b30;
+  /* filter: blur(0.1%); */
+}
+/* .page:hover span {
+  color: #000000;
+} */
