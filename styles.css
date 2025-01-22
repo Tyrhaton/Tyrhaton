@@ -21,10 +21,11 @@ body {
   background-color: #282b30;
   max-width: 550px;
   width: 100%;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
   padding: 15px;
   position: relative;
   border-radius: 10px;
+  margin: 1%;
 }
 
 .discord-profile::before {
@@ -56,7 +57,7 @@ body {
 }
 
 #status:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #status {
@@ -75,7 +76,7 @@ body {
   background-color: #43b581;
 }
 .dnd {
-    background-color: #f04747;
+  background-color: #f04747;
 }
 
 .in-dnd {
@@ -91,6 +92,7 @@ body {
   display: flex;
   flex-direction: column;
   border-radius: 10px;
+  min-height: 60vh;
 }
 
 .discord-profile .username {
@@ -159,8 +161,13 @@ hr {
 }
 
 .connection {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Twee kolommen */
+
+  /* gap: 16px; */
 }
 
 .connection .item {
@@ -172,16 +179,29 @@ hr {
   margin-bottom: 5px;
 }
 
+@media (max-width: 500px) {
+  .connection {
+    grid-template-columns: 1fr; /* Eén kolom */
+  }
+  .connection .item {
+    max-width: 100%;
+  }
+  body {
+    align-items: stretch;
+    /* justify-content: center; */
+  }
+}
+
 .item {
   text-decoration: none;
   color: white;
   font-size: 15px;
 }
 .item:hover {
-    /* border: 1px solid #282b30; */
-    background-color: #282b30;
-    /* filter: blur(0.1%); */
-  }
+  /* border: 1px solid #282b30; */
+  background-color: #282b30;
+  /* filter: blur(0.1%); */
+}
 
 .margin-hr {
   margin-bottom: 18px;
@@ -231,20 +251,68 @@ span {
     color: white;
     text-decoration: none; */
   background-color: #191b1d;
+  /* background-color: #db406b; */
   color: white;
   /* border: 1px solid #282b30; */
   border: none;
   border-radius: 5px;
   padding: 1%;
   max-width: 30%;
+  margin-bottom: 30px;
   /* width: 100%; */
   /* margin-bottom: 5px; */
 }
-.page:hover {
+.page:hover,
+input[type="radio"]:checked + label {
   /* border: 1px solid #282b30; */
   background-color: #282b30;
   /* filter: blur(0.1%); */
 }
-/* .page:hover span {
-  color: #000000;
-} */
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.content {
+  display: none;
+  color: white;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3 {
+  display: block;
+  margin-top: 2%;
+}
+
+.contact-input {
+  background-color: #191b1d;
+  color: white;
+  border: 1px solid #282b30;
+  padding: 1%;
+  border-radius: 5px;
+  width: 100%;
+}
+.contact-input:focus, #send:focus {
+  border-color: #078479; /* Verandert de randkleur */
+  box-shadow: 0 0 5px #078479; /* Geeft een glow-effect */
+  outline: none; /* Verwijdert de standaard blauwe outline */
+}
+
+#send {
+  background-color: #282b30;
+  color: white;
+  border: none;
+  padding: 1%;
+  box-shadow: 0 0 5px #191b1d; /* Geeft een glow-effect */
+border-radius: 5px;
+  /* border: 1px solid #282b30; */
+
+}
